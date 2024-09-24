@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+internal class Program
+{
+    public static void Main()
+    {
+        int n;
+        int last, number;
+        n = Convert.ToInt32(Console.ReadLine());
+        List<int> a = new List<int>();
+        for (int i = 0; i < n; i++)
+        {
+            number = Convert.ToInt32(Console.ReadLine());
+            a.Add(number);
+        }
+        last = a[n - 1];
+        for (int i = n - 1; i > 0; i--)
+        {
+            number = a[i - 1];
+            a[i - 1] = a[i];
+            a[i] = number;
+        }
+        a[0] = last;
+        foreach (int result in a)
+        {
+            Console.Write(result + " ");
+        }
+
+    }
+}
