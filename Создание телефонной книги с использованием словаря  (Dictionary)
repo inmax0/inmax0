@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dictionary<string, string> dic = new Dictionary<string, string>();
+        while (true)
+        {
+            Console.WriteLine("Меню электронной книжки");
+            Console.WriteLine("1. Добавить запись");
+            Console.WriteLine("2. Найти номер по имени");
+            Console.WriteLine("3. Вывести все записи");
+            Console.WriteLine("4. Выход");
+            int vibor = Convert.ToInt32(Console.ReadLine());
+            switch (vibor)
+            {
+                case 1:
+                    Console.WriteLine("Введите имя");
+                    string name = Console.ReadLine();
+                    Console.WriteLine("Введите номер телефона");
+                    string numberphone = Console.ReadLine();
+                    dic.Add(name, numberphone); ; break;
+                case 2:
+                    Console.WriteLine("Введите имя что бы начать поиск");
+                    string name1 = Console.ReadLine();
+                    if (dic.ContainsKey(name1))
+                    {
+                        Console.WriteLine($"Номер телефона для {name1}: {dic[name1]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Запись не найдена для {name1}");
+                    };
+                    break;
+                case 3:
+                    Console.WriteLine("Все записи:");
+                    foreach (var record in dic)
+                    {
+                        Console.WriteLine($"{record.Key}: {record.Value}");
+                    }; break;
+                case 4:
+                    return;
+            }
+        }
+    }
+}
