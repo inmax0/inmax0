@@ -1,0 +1,23 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        double a = 3.0; 
+        double b = 5.0; 
+        double f_a = f(a);
+        double f_b = f(b);
+        
+        if (f_a < f_b)
+        {
+            Console.WriteLine($"Наименьшее значение функции f(x) = {f_a} в точке a = {a}.");
+        }
+        else if (f_a > f_b)
+        {
+            Console.WriteLine($"Наименьшее значение функции f(x) = {f_b} в точке b = {b}.");
+        }
+    }
+    static double f(double x)
+    {
+        return Math.Cos(2 * x) + Math.Sin(3 * x);
+    }
+}
