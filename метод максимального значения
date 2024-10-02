@@ -1,0 +1,14 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        double x = 10; 
+        double y = 5;
+        double z = max(x, 2 * y - x) + max(5 * x + 3 * y, y);
+        Console.WriteLine("Значение z: " + z);
+    }
+    static double max(double a, double b)
+    {
+        return (a > b) ? a : b;
+    }
+}
