@@ -1,0 +1,19 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        int a = 125; 
+        int b = 256; 
+        int c = 9;   
+        int z = f(a) + f(b) - f(c);
+        Console.WriteLine($"Значение z = f(a) + f(b) - f(c) = {z}");
+    }
+    static int f(int x)
+    {
+        if (x < 10)
+        {
+            return 0; 
+        }
+        return (x / 10) % 10;
+    }
+}
