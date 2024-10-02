@@ -1,0 +1,14 @@
+class Program
+{
+    static void Main(string[] args)
+    {
+        int a = 125; 
+        int b = 256; 
+        int z = f(a) + f(b);
+        Console.WriteLine($"Значение z = f(a) + f(b) = {z}");
+    }
+    static int f(int x)
+    {
+        return x % 10;
+    }
+}
